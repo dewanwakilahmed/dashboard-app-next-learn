@@ -1,0 +1,17 @@
+.acme-logo {
+  @apply flex
+  flex-row
+  items-center
+  text-neutral-50
+  leading-none
+  w-min;
+}
+
+.acme-logo-icon {
+  @apply size-14
+  rotate-[15deg];
+}
+
+.acme-logo-text {
+  @apply text-5xl;
+}
