@@ -5,21 +5,29 @@
   gap-4
   p-4
   overflow-hidden;
+}
 
-  grid-template-rows: min-content auto;
-  grid-template-columns: 2fr 3fr;
+@media (min-width: 768px) {
+  .main {
+    grid-template-rows: min-content auto;
+    grid-template-columns: 2fr 3fr;
+  }
 }
 
 .header {
   @apply bg-blue-600
-  col-span-2
+  md:col-span-2
   rounded-lg
   flex
   items-center
   justify-center
-  p-4
   shadow
-  animate-fade-in-down;
+  animate-fade-in-down
+  p-4
+  md:p-8
+  lg:p-10
+  xl:p-12
+  2xl:p-14;
 }
 
 .hero-section {
@@ -28,21 +36,31 @@
   flex
   flex-col
   justify-center
-  p-16
-  animate-fade-in-left;
+  items-center
+  md:items-start
+  animate-fade-in-left
+  p-4
+  md:p-8
+  lg:p-10
+  xl:p-12
+  2xl:p-14;
 }
 
 .hero-title {
   @apply text-4xl
   uppercase
   font-bold
-  text-gray-900;
+  text-gray-900
+  text-center
+  md:text-left;
 }
 
 .hero-description {
   @apply mt-2
   mb-6
-  text-gray-600;
+  text-gray-600
+  text-center
+  md:text-left;
 }
 
 .learn-course-link {
@@ -77,24 +95,24 @@
 }
 
 .app-view-img-container {
-  @apply flex
+  @apply md:flex
   items-center
   justify-center
   transition
-  opacity-95
-  hover:opacity-100
-  animate-fade-in-right;
+  hover:scale-105
+  animate-fade-in-right
+  hidden;
 }
 
 .app-view-desktop {
   @apply h-auto
-  w-[650px]
+  w-[550px]
   hidden
   md:block;
 }
 
-.app-view-mobile {
+/* .app-view-mobile {
   @apply h-24 w-auto
   block
   md:hidden;
-}
+} */

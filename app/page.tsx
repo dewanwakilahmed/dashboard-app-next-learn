@@ -1,11 +1,20 @@
-import './home-page.css';
-import AcmeLogo from '@/components/AcmeLogo/AcmeLogo';
+import { FC } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRightIcon } from '@heroicons/react/24/outline';
+
+// Component
+import AcmeLogo from '@/components/AcmeLogo/AcmeLogo';
+
+// Font
 import { lusitana } from '@/app/ui/fonts';
 
-export default function HomePage() {
+// CSS
+import './home-page.css';
+
+// Icon
+import { ArrowRightIcon } from '@heroicons/react/24/outline';
+
+const HomePage: FC = () => {
   return (
     <main className="main">
       <header className="header">
@@ -35,14 +44,16 @@ export default function HomePage() {
           height={1520}
           alt="Screenshots of the dashboard project showing desktop version"
         />
-        <Image
+        {/* <Image
           className="app-view-img app-view-mobile"
           src="/hero-mobile.png"
           width={560}
           height={620}
           alt="Screenshots of the dashboard project showing mobile version"
-        />
+        /> */}
       </div>
     </main>
   );
-}
+};
+
+export default HomePage;
